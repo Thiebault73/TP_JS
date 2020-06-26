@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Graphique COVID-19</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          
+        	<h1>Evolution du COVID-19 en France</h1>
+          
+         
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 offset-3">
+           <div class="chart-container">
+
+            <canvas id="chartFra" width="200" height="150"></canvas><br>
+            <label for="filter">Filtre :</label>
+            <select name="filter" id="filter" onchange="display(this)">
+              <option value="totalCases">Nombre total de cas</option>
+              <option value="newCases">Nombre de nouveau cas</option>
+              <option value="totalDeath">Nombre total de décès</option>
+              <option value="newDeath">Nombre de nouveau décès</option>
+            </select>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/axios.min.js"></script>
+    <script src="/js/index.js"></script>
+    <script src="/js/Chart.js"></script>
+
+
+  </body>
+
+</html>
